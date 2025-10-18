@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "npm run lint:styles",
+    "lint:styles": "stylelint '**/*.css'",
+    "lint-fix": "npm run lint-fix:styles",
+    "lint-fix:styles": "stylelint --fix '**/*.css'"
   },
   "devDependencies": {
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-standard": "^39.0.0"
   }
 }
